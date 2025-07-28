@@ -1,0 +1,210 @@
+/* --- Basic Resets & Global Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0; /* Remove default margin from body */
+    padding: 0; /* Remove default padding from body */
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 20px 0; /* Top/bottom padding, no left/right */
+    text-align: center;
+    margin-bottom: 20px; /* Space below the header */
+}
+
+header h1 {
+    margin-top: 0; /* Remove default margin for h1 at the top */
+    margin-bottom: 5px; /* Small space below h1 */
+}
+
+header p {
+    margin-bottom: 0; /* Remove default margin for p at the bottom */
+    font-size: 0.9em;
+}
+
+/* --- Navigation Styling --- */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px; /* Space below the nav */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center nav items */
+    gap: 20px; /* Space between nav items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px; /* Padding inside the links */
+    display: block; /* Make the whole link area clickable */
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* --- Main Content Section Styling --- */
+main {
+    width: 90%; /* Take up 90% of the viewport width */
+    max-width: 960px; /* But not wider than 960px */
+    margin: 0 auto; /* Center the main content horizontally */
+    padding: 20px; /* Padding inside the main content area */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+section {
+    padding: 20px 0; /* Padding inside each section, top/bottom only */
+    border-bottom: 1px solid #eee; /* Separator between sections */
+    margin-bottom: 20px; /* Space below each section */
+}
+
+section:last-of-type {
+    border-bottom: none; /* No border for the last section */
+    margin-bottom: 0; /* No margin below the last section */
+}
+
+section h2 {
+    color: #4CAF50; /* Green heading */
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 15px; /* Space below headings */
+    text-align: center; /* Center section headings */
+}
+
+/* --- Paragraph Styling --- */
+p {
+    margin-bottom: 10px; /* Consistent space below paragraphs */
+}
+
+/* --- Specific Class Styling --- */
+.highlight {
+    background-color: #ffeb3b; /* Yellow background */
+    padding: 5px 10px; /* Padding around the highlighted text */
+    border-left: 5px solid #fbc02d; /* Left border for emphasis */
+    margin-bottom: 15px; /* Space below highlight */
+    display: inline-block; /* Allows padding and margin on this span-like element */
+}
+
+/* --- Example Box for Box Model Demo --- */
+.example-box {
+    background-color: #e0f2f7; /* Light blue background */
+    color: #00796b; /* Darker blue text */
+    /* Box Model in action: */
+    padding: 20px; /* Space between content and border */
+    border: 2px dashed #00bcd4; /* A dashed border */
+    margin: 30px auto; /* Space outside the border, centered horizontally */
+    width: 60%; /* Take up 60% of its parent's width */
+    max-width: 400px; /* But not wider than 400px */
+    text-align: center;
+    border-radius: 5px;
+}
+
+.example-box p {
+    margin: 0; /* Remove default margin from paragraph inside the box */
+    font-weight: bold;
+}
+
+
+/* --- Feature Items Layout (Flexbox for internal layout) --- */
+.feature-container {
+    display: flex; /* Make it a flex container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around; /* Distribute items with space around them */
+    gap: 20px; /* Space between flex items */
+}
+
+.feature-item {
+    background-color: #e8f5e9; /* Very light green */
+    border: 1px solid #c8e6c9; /* Light green border */
+    padding: 15px;
+    border-radius: 5px;
+    width: calc(50% - 10px); /* Two items per row with gap */
+    min-width: 250px; /* Ensure items don't get too small on smaller screens */
+    flex-grow: 1; /* Allow items to grow to fill space */
+    text-align: center;
+}
+
+.feature-item h3 {
+    color: #388e3c; /* Darker green for feature headings */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* --- Form Styling --- */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+.form-group label {
+    display: block; /* Make labels take up full width, placing input on next line */
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%; /* Make inputs take full width of their container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing only for textareas */
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px; /* Space above the footer */
+    font-size: 0.85em;
+}
+
+footer p {
+    margin: 5px 0; /* Small margin for paragraphs in footer */
+}
